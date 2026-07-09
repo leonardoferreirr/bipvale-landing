@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "bipvale",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": ["-m", "http.server", "4821", "--directory", "/Users/Leonardo/dev/bipvale-landing"],
+      "port": 4821
+    }
+  ]
+}
