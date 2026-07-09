@@ -114,18 +114,7 @@
     counters.forEach(function (el) { cio.observe(el); });
   }
 
-  /* ---------- Sticky-stack: enriquece cards ao afundar ---------- */
-  if (hasST && !reduce) {
-    var cards = window.gsap.utils.toArray('[data-fcard]');
-    cards.forEach(function (card, i) {
-      if (i === cards.length - 1) return;
-      var inner = card.querySelector('.fcard__inner');
-      window.gsap.to(inner, {
-        scale: 0.96, filter: 'brightness(0.74)', ease: 'none',
-        scrollTrigger: { trigger: cards[i + 1], start: 'top bottom', end: 'top top', scrub: true }
-      });
-    });
-  }
+  /* ---------- Sticky-stack: só o empilhamento (sem escurecer os cards) ---------- */
 
   /* ---------- Marquee infinito (rAF, emenda sem buraco) ---------- */
   (function marquee() {
