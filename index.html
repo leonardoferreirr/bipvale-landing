@@ -11,11 +11,15 @@
 
 <!-- Open Graph -->
 <meta property="og:type" content="website" />
+<meta property="og:url" content="https://bipvale.vercel.app/" />
 <meta property="og:title" content="BIP VALE — Inteligência empresarial com endereço certo" />
 <meta property="og:description" content="Lotes e galpões industriais em frente à Dutra, no Vale do Paraíba. De 525 m² a 30.000 m², no eixo RJ–SP." />
-<meta property="og:image" content="assets/renders/hero-aerea.webp" />
+<meta property="og:image" content="https://bipvale.vercel.app/assets/renders/hero-aerea.webp" />
+<meta property="og:image:width" content="1440" />
+<meta property="og:image:height" content="810" />
 <meta property="og:locale" content="pt_BR" />
 <meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://bipvale.vercel.app/assets/renders/hero-aerea.webp" />
 
 <link rel="preload" as="font" type="font/woff2" href="assets/fonts/archivo-800-latin.woff2" crossorigin />
 <link rel="preload" as="font" type="font/woff2" href="assets/fonts/inter-400-latin.woff2" crossorigin />
@@ -81,8 +85,8 @@
     <div class="shell hero__inner">
       <h1 class="hero__title">
         <span class="line" data-hero-line><span>Lotes e galpões</span></span>
-        <span class="line" data-hero-line><span>industriais em frente</span></span>
-        <span class="line" data-hero-line><span>à <em>Dutra</em>.</span></span>
+        <span class="line" data-hero-line><span>industriais em</span></span>
+        <span class="line" data-hero-line><span>frente à <em>Dutra</em>.</span></span>
       </h1>
       <p class="hero__sub" data-hero-fade>
         Loteamento empresarial fechado, de alto padrão e com infraestrutura 100% pronta.
@@ -99,6 +103,48 @@
       <span>Explorar</span>
       <span class="hero__scroll-line"></span>
     </a>
+  </section>
+
+  <!-- ============ CONTATO (movido pro topo) ============ -->
+  <section class="section section--deep contato" id="contato" data-scene>
+    <div class="contato__media" aria-hidden="true">
+      <img src="assets/renders/hero-aerea-1440.webp" alt="" loading="lazy" />
+    </div>
+    <div class="shell contato__inner">
+      <div class="contato__copy">
+        <h2 class="h-display" data-reveal>Garanta seu endereço<br />no BIP VALE.</h2>
+        <p data-reveal>Fale agora com um especialista e receba os valores, as condições e a disponibilidade de lotes e galpões. Sem compromisso.</p>
+        <ul class="contato__phones" data-reveal>
+          <li><a href="https://wa.me/5512997544218" target="_blank" rel="noopener" data-wa>(12) 99754-4218</a></li>
+          <li><a href="https://wa.me/5512981530442" target="_blank" rel="noopener" data-wa>(12) 98153-0442</a></li>
+        </ul>
+      </div>
+      <form class="contato__form" id="leadForm" novalidate data-reveal>
+        <div class="field">
+          <input type="text" id="nome" name="nome" required autocomplete="name" placeholder=" " />
+          <label for="nome">Nome</label>
+        </div>
+        <div class="field">
+          <input type="text" id="empresa" name="empresa" required autocomplete="organization" placeholder=" " />
+          <label for="empresa">Empresa</label>
+        </div>
+        <div class="field">
+          <input type="tel" id="whats" name="whats" required autocomplete="tel" placeholder=" " />
+          <label for="whats">WhatsApp</label>
+        </div>
+        <div class="field field--select">
+          <select id="formato" name="formato" required>
+            <option value="" selected disabled>Formato de interesse</option>
+            <option>Compra de lote</option>
+            <option>Lote com galpão pronto</option>
+            <option>Locação de galpão (BTS)</option>
+            <option>Ainda estou avaliando</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn--solid btn--block">Quero falar com um especialista</button>
+        <p class="contato__note">Retorno em horário comercial. Seus dados ficam só com a nossa equipe.</p>
+      </form>
+    </div>
   </section>
 
   <!-- ============ LOCALIZAÇÃO ============ -->
@@ -139,8 +185,7 @@
     <div class="shell">
       <div class="stats__grid">
         <div class="stat" data-reveal>
-          <span class="stat__num"><span data-count="525">525</span><span class="stat__unit"> a 30.000</span></span>
-          <span class="stat__unit-big">m²</span>
+          <span class="stat__num"><span data-count="525">525</span><span class="stat__unit"> a 30.000 m²</span></span>
           <span class="stat__label">Lotes moduláveis</span>
         </div>
         <div class="stat" data-reveal>
@@ -319,9 +364,9 @@
   <!-- ============ VTO ============ -->
   <section class="section section--paper vto" id="vto" data-scene>
     <div class="shell vto__inner">
-      <div class="vto__media" data-reveal-mask>
+      <a class="vto__media" href="https://www.vto.com.br" target="_blank" rel="noopener" data-reveal-mask aria-label="Conheça os empreendimentos da VTO">
         <img src="assets/renders/rua-interna-02.webp" alt="Empreendimento desenvolvido pela VTO Polos Empresariais" loading="lazy" />
-      </div>
+      </a>
       <div class="vto__body">
         <img class="vto__logo" src="assets/logo/vto.png" alt="VTO Polos Empresariais" width="120" height="106" data-reveal />
         <h2 class="h-display" data-reveal>Desenvolvido pela VTO<br />Polos Empresariais.</h2>
@@ -337,48 +382,6 @@
         </div>
         <a class="btn btn--dark" href="https://www.vto.com.br" target="_blank" rel="noopener" data-reveal>Conhecer a VTO</a>
       </div>
-    </div>
-  </section>
-
-  <!-- ============ CONTATO ============ -->
-  <section class="section section--deep contato" id="contato" data-scene>
-    <div class="contato__media" aria-hidden="true">
-      <img src="assets/renders/hero-aerea-1440.webp" alt="" loading="lazy" />
-    </div>
-    <div class="shell contato__inner">
-      <div class="contato__copy">
-        <h2 class="h-display" data-reveal>Garanta seu endereço<br />no BIP VALE.</h2>
-        <p data-reveal>Fale agora com um especialista e receba os valores, as condições e a disponibilidade de lotes e galpões. Sem compromisso.</p>
-        <ul class="contato__phones" data-reveal>
-          <li><a href="https://wa.me/5512997544218" target="_blank" rel="noopener" data-wa>(12) 99754-4218</a></li>
-          <li><a href="https://wa.me/5512981530442" target="_blank" rel="noopener" data-wa>(12) 98153-0442</a></li>
-        </ul>
-      </div>
-      <form class="contato__form" id="leadForm" novalidate data-reveal>
-        <div class="field">
-          <input type="text" id="nome" name="nome" required autocomplete="name" placeholder=" " />
-          <label for="nome">Nome</label>
-        </div>
-        <div class="field">
-          <input type="text" id="empresa" name="empresa" required autocomplete="organization" placeholder=" " />
-          <label for="empresa">Empresa</label>
-        </div>
-        <div class="field">
-          <input type="tel" id="whats" name="whats" required autocomplete="tel" placeholder=" " />
-          <label for="whats">WhatsApp</label>
-        </div>
-        <div class="field field--select">
-          <select id="formato" name="formato" required>
-            <option value="" selected disabled>Formato de interesse</option>
-            <option>Compra de lote</option>
-            <option>Lote com galpão pronto</option>
-            <option>Locação de galpão (BTS)</option>
-            <option>Ainda estou avaliando</option>
-          </select>
-        </div>
-        <button type="submit" class="btn btn--solid btn--block">Quero falar com um especialista</button>
-        <p class="contato__note">Retorno em horário comercial. Seus dados ficam só com a nossa equipe.</p>
-      </form>
     </div>
   </section>
 
