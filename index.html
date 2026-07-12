@@ -23,7 +23,7 @@
 
 <link rel="preload" as="font" type="font/woff2" href="assets/fonts/archivo-800-latin.woff2" crossorigin />
 <link rel="preload" as="font" type="font/woff2" href="assets/fonts/inter-400-latin.woff2" crossorigin />
-<link rel="stylesheet" href="assets/css/styles.css?v=20260712b" />
+<link rel="stylesheet" href="assets/css/styles.css?v=20260712c" />
 <script>
   /* ativa modo animado o quanto antes (evita flash) + watchdog de segurança:
      se o motor JS não sinalizar em 3s, revela todo o conteúdo mesmo assim */
@@ -83,19 +83,47 @@
     </div>
 
     <div class="shell hero__inner">
-      <h1 class="hero__title">
-        <span class="line" data-hero-line><span>Lotes e galpões</span></span>
-        <span class="line" data-hero-line><span>industriais em</span></span>
-        <span class="line" data-hero-line><span>frente à <em>Dutra</em>.</span></span>
-      </h1>
-      <p class="hero__sub" data-hero-fade>
-        Loteamento empresarial fechado, de alto padrão e com infraestrutura 100% pronta.
-        De 525 m² a 30.000 m², no eixo RJ–SP. Compre o lote, o lote com galpão pronto
-        ou alugue sob medida (BTS).
-      </p>
-      <div class="hero__cta" data-hero-fade>
-        <a class="btn btn--solid" href="#contato" data-cta>Quero receber os valores e as condições</a>
-        <a class="btn btn--ghost" href="https://wa.me/5512997544218?text=Ol%C3%A1%2C%20quero%20informa%C3%A7%C3%B5es%20sobre%20o%20BIP%20VALE." target="_blank" rel="noopener" data-wa>Falar no WhatsApp</a>
+      <div class="hero__copy">
+        <h1 class="hero__title">
+          <span class="line" data-hero-line><span>Lotes e galpões</span></span>
+          <span class="line" data-hero-line><span>industriais em</span></span>
+          <span class="line" data-hero-line><span>frente à <em>Dutra</em>.</span></span>
+        </h1>
+        <p class="hero__sub" data-hero-fade>
+          Loteamento empresarial de alto padrão, infraestrutura 100% pronta,
+          de 525 m² a 30.000 m², no eixo RJ–SP.
+        </p>
+        <a class="btn btn--ghost" href="https://wa.me/5512997544218?text=Ol%C3%A1%2C%20quero%20informa%C3%A7%C3%B5es%20sobre%20o%20BIP%20VALE." target="_blank" rel="noopener" data-wa data-hero-fade>Prefiro falar no WhatsApp</a>
+      </div>
+
+      <div class="hero__panel" id="contato">
+        <form class="hero__form" id="leadForm" novalidate>
+          <p class="hero__form-title">Receba os valores e as condições</p>
+          <p class="hero__form-sub">Fale com um especialista, sem compromisso.</p>
+          <div class="field">
+            <input type="text" id="nome" name="nome" required autocomplete="name" placeholder=" " />
+            <label for="nome">Nome</label>
+          </div>
+          <div class="field">
+            <input type="text" id="empresa" name="empresa" required autocomplete="organization" placeholder=" " />
+            <label for="empresa">Empresa</label>
+          </div>
+          <div class="field">
+            <input type="tel" id="whats" name="whats" required autocomplete="tel" placeholder=" " />
+            <label for="whats">WhatsApp</label>
+          </div>
+          <div class="field field--select">
+            <select id="formato" name="formato" required aria-label="Formato de interesse">
+              <option value="" selected disabled>Formato de interesse</option>
+              <option>Compra de lote</option>
+              <option>Lote com galpão pronto</option>
+              <option>Locação de galpão (BTS)</option>
+              <option>Ainda estou avaliando</option>
+            </select>
+          </div>
+          <button type="submit" class="btn btn--solid btn--block">Quero falar com um especialista</button>
+          <p class="hero__form-note">Retorno em horário comercial. Seus dados ficam só com a nossa equipe.</p>
+        </form>
       </div>
     </div>
 
@@ -103,48 +131,6 @@
       <span>Explorar</span>
       <span class="hero__scroll-line"></span>
     </a>
-  </section>
-
-  <!-- ============ CONTATO (movido pro topo) ============ -->
-  <section class="section section--deep contato" id="contato" data-scene>
-    <div class="contato__media" aria-hidden="true">
-      <img src="assets/renders/hero-aerea-1440.webp" alt="" loading="lazy" />
-    </div>
-    <div class="shell contato__inner">
-      <div class="contato__copy">
-        <h2 class="h-display" data-reveal>Garanta seu endereço<br />no BIP VALE.</h2>
-        <p data-reveal>Fale agora com um especialista e receba os valores, as condições e a disponibilidade de lotes e galpões. Sem compromisso.</p>
-        <ul class="contato__phones" data-reveal>
-          <li><a href="https://wa.me/5512997544218" target="_blank" rel="noopener" data-wa>(12) 99754-4218</a></li>
-          <li><a href="https://wa.me/5512981530442" target="_blank" rel="noopener" data-wa>(12) 98153-0442</a></li>
-        </ul>
-      </div>
-      <form class="contato__form" id="leadForm" novalidate data-reveal>
-        <div class="field">
-          <input type="text" id="nome" name="nome" required autocomplete="name" placeholder=" " />
-          <label for="nome">Nome</label>
-        </div>
-        <div class="field">
-          <input type="text" id="empresa" name="empresa" required autocomplete="organization" placeholder=" " />
-          <label for="empresa">Empresa</label>
-        </div>
-        <div class="field">
-          <input type="tel" id="whats" name="whats" required autocomplete="tel" placeholder=" " />
-          <label for="whats">WhatsApp</label>
-        </div>
-        <div class="field field--select">
-          <select id="formato" name="formato" required>
-            <option value="" selected disabled>Formato de interesse</option>
-            <option>Compra de lote</option>
-            <option>Lote com galpão pronto</option>
-            <option>Locação de galpão (BTS)</option>
-            <option>Ainda estou avaliando</option>
-          </select>
-        </div>
-        <button type="submit" class="btn btn--solid btn--block">Quero falar com um especialista</button>
-        <p class="contato__note">Retorno em horário comercial. Seus dados ficam só com a nossa equipe.</p>
-      </form>
-    </div>
   </section>
 
   <!-- ============ LOCALIZAÇÃO ============ -->
