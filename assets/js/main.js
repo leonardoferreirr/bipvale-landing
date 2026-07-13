@@ -227,6 +227,25 @@
     });
   }
 
+  // Modal Política de Privacidade
+  var privacyModal = document.getElementById('privacyModal');
+  if (privacyModal) {
+    var openPrivacy = function (e) {
+      if (e) e.preventDefault();
+      privacyModal.hidden = false;
+      requestAnimationFrame(function () { privacyModal.classList.add('is-open'); });
+      document.body.style.overflow = 'hidden';
+    };
+    var closePrivacy = function () {
+      privacyModal.classList.remove('is-open');
+      document.body.style.overflow = '';
+      setTimeout(function () { privacyModal.hidden = true; }, 300);
+    };
+    document.querySelectorAll('[data-privacy]').forEach(function (a) { a.addEventListener('click', openPrivacy); });
+    privacyModal.querySelectorAll('[data-privacy-close]').forEach(function (b) { b.addEventListener('click', closePrivacy); });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && privacyModal.classList.contains('is-open')) closePrivacy(); });
+  }
+
   // refresh ScrollTrigger depois que imagens/fontes carregam (altura muda)
   if (hasST) {
     window.addEventListener('load', function () { window.ScrollTrigger.refresh(); });

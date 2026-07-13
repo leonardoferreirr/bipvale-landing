@@ -23,7 +23,7 @@
 
 <link rel="preload" as="font" type="font/woff2" href="assets/fonts/archivo-800-latin.woff2" crossorigin />
 <link rel="preload" as="font" type="font/woff2" href="assets/fonts/inter-400-latin.woff2" crossorigin />
-<link rel="stylesheet" href="assets/css/styles.css?v=20260712c" />
+<link rel="stylesheet" href="assets/css/styles.css?v=20260713a" />
 <script>
   /* ativa modo animado o quanto antes (evita flash) + watchdog de segurança:
      se o motor JS não sinalizar em 3s, revela todo o conteúdo mesmo assim */
@@ -47,10 +47,6 @@
       <a href="#vto" data-nav>A VTO</a>
     </nav>
     <div class="header__actions">
-      <a class="btn btn--ghost btn--sm" href="https://wa.me/5512997544218?text=Ol%C3%A1%2C%20quero%20informa%C3%A7%C3%B5es%20sobre%20o%20BIP%20VALE." target="_blank" rel="noopener" data-wa>
-        <svg class="ico-wa" viewBox="0 0 24 24" aria-hidden="true" width="16" height="16"><path fill="currentColor" d="M17.5 14.4c-.3-.2-1.7-.9-2-1c-.3-.1-.5-.2-.6.1c-.2.3-.7 1-.9 1.1c-.2.2-.3.2-.6.1c-.3-.2-1.2-.5-2.3-1.4c-.9-.8-1.4-1.7-1.6-2c-.2-.3 0-.5.1-.6c.1-.1.3-.3.4-.5c.1-.2.2-.3.3-.5c.1-.2 0-.4 0-.5c-.1-.2-.6-1.5-.9-2c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3c-.2.3-.9.9-.9 2.2c0 1.3.9 2.5 1 2.7c.1.2 1.8 2.8 4.4 3.9c.6.3 1.1.4 1.5.5c.6.2 1.2.2 1.6.1c.5-.1 1.7-.7 1.9-1.3c.2-.7.2-1.2.2-1.3c-.1-.1-.3-.2-.5-.3M12 21.5a9.5 9.5 0 0 1-4.8-1.3l-.3-.2l-3.6.9l1-3.5l-.2-.4A9.5 9.5 0 1 1 12 21.5m0-21A11.5 11.5 0 0 0 2 18l-1.5 5.5L6 22a11.5 11.5 0 1 0 6-21.5"/></svg>
-        WhatsApp
-      </a>
       <a class="btn btn--solid btn--sm" href="#contato" data-cta>Falar com especialista</a>
     </div>
     <button class="header__burger" id="burger" aria-label="Abrir menu" aria-expanded="false">
@@ -405,6 +401,17 @@
   </div>
 </footer>
 
+<!-- Modal Política de Privacidade -->
+<div class="privacy-modal" id="privacyModal" role="dialog" aria-modal="true" aria-labelledby="privacyTitle" hidden>
+  <div class="privacy-modal__backdrop" data-privacy-close></div>
+  <div class="privacy-modal__card">
+    <button class="privacy-modal__close" type="button" aria-label="Fechar" data-privacy-close>&times;</button>
+    <h3 id="privacyTitle">Política de Privacidade</h3>
+    <p>Prezado cliente, a Lei Geral de Proteção de Dados, a LGPD (Lei nº 13.709/2018), foi criada com a finalidade de proteger e disciplinar o tratamento de dados pessoais. Nós da BIP cuidamos e nos importamos com os seus dados pessoais e respeitamos os seus direitos como titulares de dados. Por isso, demos início ao nosso programa de adequação à LGPD, buscando alcançar as melhores práticas e assegurar o tratamento de dados em conformidade com as normas legais.</p>
+    <p>Queremos que todos sintam confiança no nosso serviço. Em nosso website nós usamos cookies e outras tecnologias semelhantes para melhorar a sua experiência de navegação. Atenciosamente, Equipe BIP.</p>
+  </div>
+</div>
+
 <!-- WhatsApp flutuante -->
 <a class="wa-float" href="https://wa.me/5512997544218?text=Ol%C3%A1%2C%20quero%20informa%C3%A7%C3%B5es%20sobre%20o%20BIP%20VALE." target="_blank" rel="noopener" aria-label="Falar no WhatsApp" data-wa>
   <svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><path fill="currentColor" d="M17.5 14.4c-.3-.2-1.7-.9-2-1c-.3-.1-.5-.2-.6.1c-.2.3-.7 1-.9 1.1c-.2.2-.3.2-.6.1c-.3-.2-1.2-.5-2.3-1.4c-.9-.8-1.4-1.7-1.6-2c-.2-.3 0-.5.1-.6c.1-.1.3-.3.4-.5c.1-.2.2-.3.3-.5c.1-.2 0-.4 0-.5c-.1-.2-.6-1.5-.9-2c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3c-.2.3-.9.9-.9 2.2c0 1.3.9 2.5 1 2.7c.1.2 1.8 2.8 4.4 3.9c.6.3 1.1.4 1.5.5c.6.2 1.2.2 1.6.1c.5-.1 1.7-.7 1.9-1.3c.2-.7.2-1.2.2-1.3c-.1-.1-.3-.2-.5-.3M12 21.5a9.5 9.5 0 0 1-4.8-1.3l-.3-.2l-3.6.9l1-3.5l-.2-.4A9.5 9.5 0 1 1 12 21.5m0-21A11.5 11.5 0 0 0 2 18l-1.5 5.5L6 22a11.5 11.5 0 1 0 6-21.5"/></svg>
@@ -413,6 +420,6 @@
 <script src="assets/js/vendor/gsap.min.js" defer></script>
 <script src="assets/js/vendor/ScrollTrigger.min.js" defer></script>
 <script src="assets/js/vendor/lenis.min.js" defer></script>
-<script src="assets/js/main.js?v=20260712" defer></script>
+<script src="assets/js/main.js?v=20260713a" defer></script>
 </body>
 </html>
