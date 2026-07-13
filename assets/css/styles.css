@@ -297,7 +297,7 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:700;line-height:1.02;let
    PARA QUEM (marquee)
    ============================================================ */
 .paraquem{background:var(--bg);overflow:hidden}
-.paraquem__title{color:var(--fg);margin-bottom:clamp(2rem,4vw,3rem)}
+.paraquem__title{color:var(--fg);margin-bottom:clamp(2rem,4vw,3rem);font-size:clamp(1.6rem,3.5vw,3.1rem);text-wrap:balance}
 .marquee{display:flex;flex-direction:column;gap:.4rem;padding-block:1rem;-webkit-mask:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
 .marquee__row{display:flex;white-space:nowrap;will-change:transform;font-family:var(--font-display);font-weight:600;font-size:clamp(1.5rem,3.4vw,3rem);letter-spacing:-.01em;color:var(--muted)}
 .marquee__row span{margin-right:.5em}
