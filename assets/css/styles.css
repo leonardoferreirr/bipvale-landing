@@ -401,8 +401,10 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:700;line-height:1.02;let
    ============================================================ */
 @media (max-width:1000px){
   .header__nav{display:none}
-  .header__burger{display:flex;margin-left:auto}
-  .header__actions{display:none}
+  .header__inner{gap:.6rem}
+  .header__burger{display:flex}
+  .header__actions{display:flex;margin-left:auto}
+  .header__actions .btn{padding:.55rem .9rem;font-size:.76rem;white-space:nowrap}
   .hero{align-items:flex-start}
   .hero__inner{grid-template-columns:1fr;gap:1.8rem}
   .hero__copy{max-width:640px}
