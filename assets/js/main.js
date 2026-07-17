@@ -135,6 +135,32 @@
     });
   })();
 
+  /* ---------- Reel de fotos reais (auto-rolando, pausa no hover) ---------- */
+  (function reel() {
+    var track = document.querySelector('[data-reel-track]');
+    if (!track) return;
+    var wrap = track.closest('[data-reel]');
+    if (reduce) {
+      // sem movimento: vira rolagem horizontal manual, sem máscara nas bordas
+      if (wrap) { wrap.style.overflowX = 'auto'; wrap.style.webkitMaskImage = 'none'; wrap.style.maskImage = 'none'; }
+      return;
+    }
+    track.innerHTML += track.innerHTML; // par de cópias -> emenda em -50%
+    var half = track.scrollWidth / 2;
+    var x = 0, speed = 0.5, paused = false;
+    if (wrap) {
+      wrap.addEventListener('mouseenter', function () { paused = true; });
+      wrap.addEventListener('mouseleave', function () { paused = false; });
+    }
+    var rt;
+    window.addEventListener('resize', function () {
+      clearTimeout(rt);
+      rt = setTimeout(function () { half = track.scrollWidth / 2; if (x <= -half) x = 0; }, 200);
+    });
+    function tick() { if (!paused) { x -= speed; if (x <= -half) x += half; track.style.transform = 'translateX(' + x + 'px)'; } requestAnimationFrame(tick); }
+    requestAnimationFrame(tick);
+  })();
+
   /* ---------- Header: solid + progress + scrollspy ---------- */
   var header = document.getElementById('siteHeader');
   var progress = document.getElementById('scrollProgress');

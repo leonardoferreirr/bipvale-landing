@@ -294,6 +294,24 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:700;line-height:1.02;let
 .gfig::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(6,22,31,.85));z-index:1}
 
 /* ============================================================
+   OBRA (reel de fotos reais — auto-rolando)
+   ============================================================ */
+.obra{background:var(--bg);overflow:hidden}
+.obra__head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:end;gap:1.5rem;margin-bottom:clamp(2rem,4vw,3.4rem)}
+.obra__head h2{color:var(--fg)}
+.obra__head p{color:var(--muted);max-width:46ch}
+.obra__eyebrow{display:inline-flex;align-items:center;gap:.7rem;color:var(--muted);font-size:.74rem;letter-spacing:.2em;text-transform:uppercase;margin-bottom:1rem}
+.obra__eyebrow::before{content:"";width:30px;height:1px;background:var(--accent)}
+.reel{position:relative;overflow:hidden;-webkit-mask:linear-gradient(90deg,transparent,#000 5%,#000 95%,transparent);mask:linear-gradient(90deg,transparent,#000 5%,#000 95%,transparent)}
+.reel__track{display:flex;gap:clamp(.9rem,1.4vw,1.3rem);width:max-content;will-change:transform}
+.reel__item{position:relative;flex:0 0 auto;width:clamp(280px,42vw,520px);border-radius:var(--radius-lg);overflow:hidden;aspect-ratio:3/2;background:rgba(239,235,224,.04)}
+.reel__item img{width:100%;height:100%;object-fit:cover;display:block;transition:transform 1.1s var(--ease-out)}
+.reel__item:hover img{transform:scale(1.05)}
+.reel__item figcaption{position:absolute;left:0;bottom:0;padding:1.1rem 1.3rem;font-family:var(--font-display);font-weight:600;font-size:.98rem;color:#fff;z-index:2}
+.reel__item::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 52%,rgba(6,22,31,.82));z-index:1}
+.reel__hint{color:var(--muted);font-size:.78rem;margin-top:1.4rem;padding-inline:var(--gutter);max-width:calc(var(--shell) + var(--gutter)*2);margin-inline:auto}
+
+/* ============================================================
    PARA QUEM (marquee)
    ============================================================ */
 .paraquem{background:var(--bg);overflow:hidden}
